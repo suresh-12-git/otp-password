@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            height: 50px;
+            background-color: black;
+            color:wheat;
+            padding: 10px;
+            font-size: 20px;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <button id="ss">GENERATE YOUR OTP</button>
+    <h1 id="hh"></h1>
+    <script>
+       var btn= document.getElementById("ss")
+       btn.addEventListener("click",function(){
+            var a=""
+            for(i=0;i<4;i++){
+                var b=Math.floor(Math.random()*10)
+                a+=b
+            }
+            var d=document.getElementById("hh")
+            d.textContent=a
+        })
+    </script>
+</body>
+</html>
